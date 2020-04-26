@@ -1,0 +1,413 @@
+<html>
+<head>
+    <title>Chess app - testing</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--	<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" type="text/css" href="../chess.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="chess2020.js"></script>
+</head>
+
+<body>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-8">
+                <h2><b>First Version of My Chess App22</b></h2>
+                <table id="source">
+                    <tr>
+                        <td class="droppable" data-color="white" data-rank="8" data-column="1">
+                            <!-- square A8 -->
+                            <img src="../images/black_rook.svg" id="draggable" data-moved="false" data-rank="8" data-column="1" data-color="black" data-type="rook" class="a8">
+                        </td>
+
+                        <td class="droppable blackSquare" data-color="black" data-rank="8" data-column="2">
+                            <!-- square B8 -->
+                            <img src="../images/black_knight.svg" id="draggable" data-color="black" data-rank="8" data-column="2" data-type="knight">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="8" data-column="3">
+                            <!-- square C8 -->
+                            <img src="../images/black_bishop.svg" id="draggable" data-color="black" data-rank="8" data-column="3" data-type="bishop">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="8" data-column="4" id="d8">
+                            <!-- square D8 -->
+                            <img src="../images/black_queen.svg" id="draggable" data-rank="8" data-column="4" data-color="black" data-type="queen">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="8" data-column="5">
+                            <!-- square E8 -->
+                            <img src="../images/black_king.svg" id="draggable" data-moved="false" data-color="black" data-rank="8" data-column="5" data-type="king">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="8" data-column="6" id="f8">
+                            <!-- square F8 -->
+                            <img src="../images/black_bishop.svg" id="draggable" data-color="black" data-rank="8" data-column="6" data-type="bishop">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="8" data-column="7">
+                            <!-- square G8 -->
+                            <img src="../images/black_knight.svg" id="draggable" data-color="black" data-rank="8" data-column="7" data-type="knight">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="8" data-column="8">
+                            <!-- square H8 -->
+                            <img src="../images/black_rook.svg" id="draggable" data-moved="false" data-rank="8" data-column="8" data-color="black" data-type="rook" class="h8">
+                        </td>
+                        <td class="notation">
+                            8
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="droppable blackSquare" data-color="black" data-rank="7" data-column="1">
+                            <!-- square A7 -->
+                            <img src="../images/black_pawn.svg" data-moved="false" data-color="black" data-rank="7" data-column="1" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="7" data-column="2">
+                            <!-- square B7 -->
+                            <img src="../images/black_pawn.svg" data-moved="false" data-color="black" data-rank="7" data-column="2" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="7" data-column="3">
+                            <!-- square C7 -->
+                            <img src="../images/black_pawn.svg" data-color="black" data-moved="false" data-rank="7" data-column="3" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="7" data-column="4">
+                            <!-- square D7 -->
+                            <img src="../images/black_pawn.svg" data-moved="false" data-color="black" data-rank="7" data-column="4" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="7" data-column="5">
+                            <!-- square E7 -->
+                            <img src="../images/black_pawn.svg" data-color="black" data-moved="false" data-rank="7" data-column="5" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="7" data-column="6">
+                            <!-- square F7 -->
+                            <img src="../images/black_pawn.svg" data-color="black" data-rank="7" data-moved="false" data-column="6" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="7" data-column="7">
+                            <!-- square G7 -->
+                            <img src="../images/black_pawn.svg" data-color="black" data-rank="7" data-column="7" data-moved="false" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="7" data-column="8">
+                            <!-- square H7 -->
+                            <img src="../images/black_pawn.svg" data-color="black" data-moved="false" data-rank="7" data-column="8" data-type="pawn">
+                        </td>
+                        <td class="notation">
+                            7
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="droppable" data-color="white" data-rank="6" data-column="1">
+                            <!-- square A6 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="6" data-column="2">
+                            <!-- square B6 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="6" data-column="3">
+                            <!-- square C6 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="6" data-column="4">
+                            <!-- square D6 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="6" data-column="5">
+                            <!-- square E6 -->
+                        </td>
+
+                        <td class="droppable blackSquare" data-color="black" data-rank="6" data-column="6"><!-- square F6 --></td>
+
+                        <td class="droppable" data-color="white" data-rank="6" data-column="7">
+                            <!-- square G6 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="6" data-column="8">
+                            <!-- square H6 -->
+                        </td>
+                        <td class="notation">
+                            6
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="droppable blackSquare" data-color="black" data-rank="5" data-column="1">
+                            <!-- square A5 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="5" data-column="2">
+                            <!-- square B5 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="5" data-column="3">
+                            <!-- square C5 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="5" data-column="4">
+                            <!-- square D5 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="5" data-column="5">
+                            <!-- square E5 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="5" data-column="6">
+                            <!-- square F5 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="5" data-column="7">
+                            <!-- square G5 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="5" data-column="8">
+                            <!-- square H5 -->
+                        </td>
+                        <td class="notation">
+                            5
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="droppable" data-color="white" data-rank="4" data-column="1">
+                            <!-- square A4 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="4" data-column="2">
+                            <!-- square B4 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="4" data-column="3">
+                            <!-- square C4 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="4" data-column="4">
+                            <!-- square D4 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="4" data-column="5">
+                            <!-- square E4 -->
+
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="4" data-column="6">
+                            <!-- square F4 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="4" data-column="7">
+                            <!-- square G4 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="4" data-column="8">
+                            <!-- square H4 -->
+                        </td>
+                        <td class="notation">
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="droppable blackSquare" data-color="black" data-rank="3" data-column="1">
+                            <!-- square A3 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="3" data-column="2">
+                            <!-- square B3 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="3" data-column="3">
+                            <!-- square C3 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="3" data-column="4">
+                            <!-- square D3 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="3" data-column="5">
+
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="3" data-column="6">
+                            <!-- square F3 -->
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="3" data-column="7">
+                            <!-- square G3 -->
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="3" data-column="8">
+                            <!-- square H3 -->
+                        </td>
+                        <td class="notation">
+                            3
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="droppable" data-color="white" data-rank="2" data-column="1">
+                            <!-- square A2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="1" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="2" data-column="2">
+                            <!-- square B2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="2" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="2" data-column="3">
+                            <!-- square C2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="3" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="2" data-column="4">
+                            <!-- square D2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="4" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="2" data-column="5">
+                            <!-- square E2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="5" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="2" data-column="6">
+                            <!-- square F2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="6" data-type="pawn">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="2" data-column="7">
+                            <!-- square G2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="7" data-type="pawn">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="2" data-column="8">
+                            <!-- square H2 -->
+                            <img src="../images/white_pawn.svg" data-color="white" data-moved="false" data-rank="2" data-column="8" data-type="pawn">
+                        </td>
+                        <td class="notation">
+                            2
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td class="droppable blackSquare" data-color="black" data-rank="1" data-column="1">
+                            <!-- square A1 -->
+                            <img src="../images/white_rook.svg" data-moved="false" data-rank="1" data-column="1" data-color="white" data-type="rook" class="a1">
+
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="1" data-column="2">
+                            <!-- square B1 -->
+                            <img src="../images/white_knight.svg" data-rank="1" data-column="2" data-color="white" data-type="knight">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="1" data-column="3">
+                            <!-- square C1 -->
+                            <img src="../images/white_bishop.svg" data-color="white" id="draggable" data-rank="1" data-column="3" data-type="bishop">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="1" data-column="4" id="d1">
+                            <!-- square D1 -->
+                            <img src="../images/white_queen.svg" id="draggable" data-color="white" data-rank="1" data-column="4" data-type="queen">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="1" data-column="5">
+                            <!-- square E1 -->
+                            <img src="../images/white_king.svg" id="draggable" data-moved="false" data-color="white" data-rank="1" data-column="5" data-type="king">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="1" data-column="6" id="f1">
+                            <!-- square F1 -->
+                            <img src="../images/white_bishop.svg" data-color="white" id="draggable" data-rank="1" data-column="6" data-type="bishop">
+                        </td>
+                        <td class="droppable blackSquare" data-color="black" data-rank="1" data-column="7">
+                            <!-- square G1 -->
+                            <img src="../images/white_knight.svg" data-rank="1" data-column="7" data-color="white" data-type="knight">
+                        </td>
+                        <td class="droppable" data-color="white" data-rank="1" data-column="8">
+                            <!-- square H1 -->
+                            <img src="../images/white_rook.svg" data-rank="1" data-moved="false" data-column="8" data-color="white" data-type="rook" class="h1square">
+                        </td>
+                        <td class="notation">
+                            1
+                        </td>
+
+                    </tr>
+                    <tr class="notation">
+                        <td>
+                            A
+                        </td>
+                        <td>
+                            B
+                        </td>
+                        <td>
+                            C
+                        </td>
+                        <td>
+                            D
+                        </td>
+                        <td>
+                            E
+                        </td>
+                        <td>
+                            F
+                        </td>
+                        <td>
+                            G
+                        </td>
+                        <td>
+                            H
+                        </td>
+                        <td class="notation">
+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <br><br>
+            <div class="col-sm-3 col-md-5 col-lg-4">
+
+                <h3><b>Removed pieces:</b></h3>
+
+                <div id="containerPieces" class="borderRemovingPieces">
+                </div>
+
+                <table>
+                    <h3><b>Your last move:</b></h3>
+                    <tr>
+                        <td><b>Piece</b></td>
+                        <td><b>Column</b></td>
+                        <td><b>Rank</b></td>
+                        <td><b>Color</b></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div id="pieceDiv"></div>
+                        </td>
+                        <td>
+                            <div id="columnDiv"></div>
+                        </td>
+                        <td>
+                            <div id="rankDiv"></div>
+                        </td>
+                        <td>
+                            <div id="colorDiv"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="" id="source">
+                    <h3><b>Prepared pieces for promotion:</b></h3>
+                    <img src="../images/white_rook.svg" data-rank="1" data-column="" data-color="white" data-type="rook" data-time="newWhiteRook">
+                    <img src="../images/white_knight.svg" data-rank="1" data-column="" data-color="white" data-type="knight" data-time="newWhiteKnight">
+                    <img src="../images/white_bishop.svg" data-rank="1" data-column="" data-color="white" data-type="bishop" data-time="newWhiteBishop">
+                    <img src="../images/white_queen.svg" data-rank="" data-column="" data-color="white" data-type="queen" data-time="newWhiteQueen">
+
+                    <br>
+                    <img src="../images/black_rook.svg" data-rank="1" data-column="" data-color="black" data-type="rook" data-time="newBlackRook">
+                    <img src="../images/black_knight.svg" data-rank="1" data-column="" data-color="black" data-type="knight" data-time="newBlackKnight">
+                    <img src="../images/black_bishop.svg" data-rank="1" data-column="" data-color="black" data-type="bishop" data-time="newBlackBishop">
+                    <img src="../images/black_queen.svg" data-rank="" data-column="" data-color="black" data-type="queen" data-time="newBlackQueen">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
